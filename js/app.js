@@ -117,11 +117,19 @@ const
 
 // this function for create a new names on click the button
 function getAll() {
-    let newData = new Seattle(name.value, max.value, min.value, avr.value)
-    let removeRow = Table.rows.length;
-    Table.deleteRow(removeRow - 1);
-    newData.content();
-    newData.footer();
+    if(name.value == '' || max.value == '' || min.value == '' || avr.value == '') {
+        alert('pls Fill your info')
+    }else{
+        let newData = new Seattle(name.value, max.value, min.value, avr.value)
+        let removeRow = Table.rows.length;
+        Table.deleteRow(removeRow - 1);
+        newData.content();
+        newData.footer();
+        name.value = '';
+        max.value = '';
+        min.value = '';
+        avr.value = '';
+    }
 }
 
 // validation 
@@ -136,3 +144,4 @@ function getAll() {
 // function checkName() {
 
 // }
+
