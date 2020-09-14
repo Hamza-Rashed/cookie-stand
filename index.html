@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css"/>
     <title>Document</title>
 </head>
-
 <body>
+    
+<header>
+    <ul>
+        <li> <a href="./index.html" class="Home"> Home </a> </li>
+    <li> <a href="./sales.html" class="Cookies"> Cookies </a> </li>
+    <li> <a href="https://www.facebook.com/hamza.rashed.777/" class="Contact">Contact</a> </li>
 
-
-    <script src="help.js"></script>
+</ul>
+</header>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,256L48,234.7C96,213,192,171,288,170.7C384,171,480,213,576,234.7C672,256,768,256,864,234.7C960,213,1056,171,1152,160C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+<div class="container">
+<div class="ChoosUs">
+<img src="./img/software_development_team_coding_programming_strategy_thinkstock_673873632-100749663-large.jpg"> 
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptate nisi aliquam, soluta dolores unde debitis quas ut. Assumenda accusantium earum placeat neque modi animi ullam non, facere eum aut?</p>
+</div>
+<div class="FindUs">
+    <img src="./img/welcome.jpg">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod cum vero expedita nisi culpa. Labore atque dignissimos dolores commodi amet fugiat, in nemo ad exercitationem hic repellendus veniam, eius laudantium.</p>
+    <button>Seattle</button>
+    <button>Tokyo</button>
+    <button>Dubai</button> 
+    <button>Paris</button>
+    <button>Lima</button>
+</div>
+</div>
+<footer>
+    &#169;  2020 the web developer 
+</footer>
+<script>
+    window.addEventListener('scroll' , () => {
+        let header = document.querySelector("ul");
+        let Home = document.querySelector(".Home");
+        let Cookies = document.querySelector(".Cookies");
+        let Contact = document.querySelector(".Contact");
+        header.classList.toggle("new-header",window.scrollY > 0);
+        Home.classList.toggle("new-Home" , window.scrollY > 0)   
+        Cookies.classList.toggle("new-Cookies" , window.scrollY > 0)   
+        Contact.classList.toggle("new-Contact" , window.scrollY > 0)   
+    })
+</script>
 </body>
-
-
 </html>

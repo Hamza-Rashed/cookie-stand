@@ -1,43 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="stylesheet" href="./css/sales.css">
     <title>Document</title>
-</head>
-<body>
-    
-<input type="text" placeholder="name" id="name">
-<input type="text" placeholder="max" id="max">
-<input type="text" placeholder="min" id="min">
-<input type="text" placeholder="average" id="avg">
-<button>Click</button>
+  </head>
+  <body>
+    <input type="text" placeholder="name" id="name"/>
+    <p id="check-name"></p>
+    <input type="text" placeholder="max" id="max"/>
+    <p id="check-max"></p>
+    <input type="text" placeholder="min" id="min"/>
+    <p id="check-max"></p>
+    <input type="text" placeholder="average" id="avg"/>
+    <p id="check-avg"></p>
+    <button onclick="getAll()">Click</button>
 
-<div id="store">
-<!-- 
-<table>
-    <tr>
-        <td>aer</td>
-        <td>eaf</td>
-        <td>aef</td>
-        <td>adfa</td>
-        <td>adfad</td>
-        <td>adfdaf</td>
-        <td>adfad</td>
-        <td>adfadf</td>
-        <td>adfd</td>
-        <td>dgfdsf</td>
-        <td>dsafsd</td>
-        <td>sdfds</td>
-        <td>sdgfs</td>
-        <td>sdgfs</td>
-        <td>sdgfdsf</td>
-    </tr>
-</table> -->
-
-
-</div>
+    <div id="store"></div>
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
