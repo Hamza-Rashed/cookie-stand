@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(203, 208, 212);
+}
+header{
+    background-color: rgb(41, 40, 39);
+}
+header li{
+    margin-left: 150px;
+    display: inline-block;
+    padding: 50px;
+
+}
+header li a{
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+}
+section{
+    margin-top: 150px;
+    text-align: center;
+    display: inline-flex;
+    width: 100%;
+}
+h1{
+    margin-top: -50px;
+    margin-left: 150px;
+}
+
+li{
+    list-style: none;
+    padding: 20px;
+    margin-left: -100px;
+}
+
+footer{
+    background-color: rgb(41, 40, 39);
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
