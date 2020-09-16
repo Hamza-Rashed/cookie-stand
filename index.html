@@ -21,8 +21,7 @@
     <h1>Why Us</h1>
 <div class="ChoosUs">
     
-<img src="./img/software_development_team_coding_programming_strategy_thinkstock_673873632-100749663-large.jpg"> 
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptate nisi aliquam, soluta dolores unde debitis quas ut. Assumenda accusantium earum placeat neque modi animi ullam non, facere eum aut?</p>
+    <img src="./img/chinookT.png"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptate nisi aliquam, soluta dolores unde debitis quas ut. Assumenda accusantium earum placeat neque modi animi ullam non, facere eum aut?</p>
 <button onclick="window.location.href = './sales.html'">Cookies</button>
 </div>
 <div class="FindUs">
@@ -32,11 +31,14 @@
         
     </p>
 
-    <button>Seattle</button>
-    <button>Tokyo</button>
-    <button>Dubai</button> <br>
-    <button>Paris</button>
-    <button>Lima</button>
+    <button onclick="Seattle()">Seattle</button>
+    <button onclick="Tokyo()">Tokyo</button>
+    <button onclick="Dubai()">Dubai</button> <br>
+    <button onclick="Paris()">Paris</button>
+    <button onclick="Lima()">Lima</button>
+
+</div>
+<div class="hours">
     <h1>
         Hours open
     </h1>
@@ -58,6 +60,22 @@
     Cookies.classList.toggle("new-Cookies" , window.scrollY > 0)   
     Contact.classList.toggle("new-Contact" , window.scrollY > 0)   
 })
+
+function Seattle() {
+    open("https://seattlemag.com/eat-and-drink/tastiest-cookies-seattle")
+}
+function Tokyo() {
+    open("https://www.tokyomilkcheesesg.com/menu/")
+}
+function Dubai() {
+    open("https://naomidsouza.com/best-cookies-in-dubai/")
+}
+function Paris() {
+    open("https://www.pinterest.com/gusfernandez509/paris-cookies/")
+}
+function Lima() {
+    open("https://www.namaste-organic.com/products/ladang-lima-blackmond-cookies-180gr")
+}
 </script>
 </body>
 </html>
