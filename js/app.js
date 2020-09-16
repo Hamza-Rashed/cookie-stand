@@ -111,19 +111,19 @@ Seattle.prototype.footer();
 
 
 let inputs = document.getElementById('inputs')
-inputs.addEventListener('submit', function(e) {
-    e.preventDefault();
-    var name = e.target.name.value ;
-    var min = parseInt(e.target.min.value);
-    var max = parseInt(e.target.max.value );
-    var avg = parseFloat(e.target.avg.value);
+inputs.addEventListener('submit', function(ev) {
+    ev.preventDefault();
+    var name = ev.target.name.value ;
+    var min = parseInt(ev.target.min.value);
+    var max = parseInt(ev.target.max.value );
+    var avg = parseFloat(ev.target.avg.value);
     var newData = new Seattle(name,max,min,avg);
     var rowCount = Table.rows.length;
     Table.deleteRow(rowCount-1);
     newData.content();
     newData.footer();
-    e.target.name.value = "";
-    e.target.min.value = "";
-    e.target.max.value = "";
-    e.target.avg.value = "";
+    ev.target.name.value = "";
+    ev.target.min.value = "";
+    ev.target.max.value = "";
+    ev.target.avg.value = "";
   });
