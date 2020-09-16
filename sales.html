@@ -1,22 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Cookies</title>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style2.css" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="stylesheet" href="./css/sales.css">
+    <title>Document</title>
   </head>
   <body>
-    <header>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sales.html">Sales</a></li>
-        <li><a href="https://www.facebook.com/hamza.rashed.777/">Contact us</a></li>
-      </ul>
-    </header>
-    <section id="seattle"></section>
 
-    <footer>Copyright &copy; The web developer 2020</footer>
+      <div class="content">
+   
+<div class="inputs">
+  <input type="text" placeholder="Name" id="name"/>
+  <p id="check-name"></p>
+  <input type="text" placeholder="Max" id="max"/>
+  <p id="check-max"></p>
+  <input type="text" placeholder="Min" id="min"/>
+  <p id="check-max"></p>
+  <input type="text" placeholder="Average" id="avg"/>
+  <p id="check-avg"></p>
+  <button onclick="getAll()">Click</button>
+</div>
 
-    <script src="app.js"></script>  
+  <div id="store" class="store"></div>
+</div>
+
+    
+
+    <footer>
+      &#169;  2020 the web developer 
+  </footer>
+    <script src="./js/app.js"></script>
   </body>
 </html>
