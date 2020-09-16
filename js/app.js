@@ -109,39 +109,21 @@ Paris.content();
 Lima.content();
 Seattle.prototype.footer();
 
-const
-    name = document.getElementById('name'),
-    max = document.getElementById('max'),
-    min = document.getElementById('min'),
-    avr = document.getElementById('avg');
 
-// this function for create a new names on click the button
-function getAll() {
-    if(name.value == '' || max.value == '' || min.value == '' || avr.value == '') {
-        alert('pls Fill your info')
-    }else{
-        let newData = new Seattle(name.value, max.value, min.value, avr.value)
-        let removeRow = Table.rows.length;
-        Table.deleteRow(removeRow - 1);
-        newData.content();
-        newData.footer();
-        name.value = '';
-        max.value = '';
-        min.value = '';
-        avr.value = '';
-    }
-}
-
-// validation 
-
-// const
-//     check_name = document.getElementById('check-name'),
-//     check_max = document.getElementById('check-max'),
-//     check_min = document.getElementById('check-min'),
-//     check_avg = document.getElementById('check-avg');
-
-// let regName = /[a-z]/i;
-// function checkName() {
-
-// }
-
+let inputs = document.getElementById('inputs')
+inputs.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var name = e.target.name.value ;
+    var min = parseInt(e.target.min.value);
+    var max = parseInt(e.target.max.value );
+    var avg = parseFloat(e.target.avg.value);
+    var newData = new Seattle(name,max,min,avg);
+    var rowCount = Table.rows.length;
+    Table.deleteRow(rowCount-1);
+    newData.content();
+    newData.footer();
+    e.target.name.value = "";
+    e.target.min.value = "";
+    e.target.max.value = "";
+    e.target.avg.value = "";
+  });
