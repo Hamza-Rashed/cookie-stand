@@ -10,7 +10,7 @@ let Table = document.createElement('table');
 // append the table into the div
 main.appendChild(Table)
 // this is the main function (class)
-function Seattle(name, max, min, avg) {
+function Shope(name, max, min, avg) {
     this.name = name;
     this.max = max;
     this.min = min;
@@ -23,12 +23,12 @@ function Seattle(name, max, min, avg) {
 }
 
 // this prototype for create a random number
-Seattle.prototype.getRandomNumber = function () {
+Shope.prototype.getRandomNumber = function () {
     return Math.floor(Math.random() * (this.max - this.min + 1) + this.min)
 }
 
 // here i complete the calculation of the cookies
-Seattle.prototype.getRandomCostomer = function () {
+Shope.prototype.getRandomCostomer = function () {
     for (let i = 0; i < hours.length; i++) {
         var randomCostomerNom = this.getRandomNumber(this.min, this.max, this.avg);
         this.cookies = Math.ceil(randomCostomerNom * this.avg)
@@ -37,7 +37,7 @@ Seattle.prototype.getRandomCostomer = function () {
 }
 
 // here i drow the header of the table 
-Seattle.prototype.header = function () {
+function header() {
 
     var tr = document.createElement('tr');
     Table.appendChild(tr);
@@ -55,7 +55,7 @@ Seattle.prototype.header = function () {
 }
 
 // here in this prototype i drow the content of the table and print the values
-Seattle.prototype.content = function () {
+Shope.prototype.content = function () {
     let trEle = document.createElement('tr');
     Table.appendChild(trEle);
     trEle.textContent = this.name;
@@ -72,7 +72,7 @@ Seattle.prototype.content = function () {
 }
 
 // in this prototype i drow the footer of the table and print the value
-Seattle.prototype.footer = function () {
+function footer() {
     let trEleTotal = document.createElement('tr');
     Table.appendChild(trEleTotal)
     let tdEleTotal = document.createElement('td')
@@ -95,53 +95,32 @@ Seattle.prototype.footer = function () {
 }
 
 const  
-    Seattl = new Seattle('Seattle', 65, 20, 6.3),
-    Tokyo = new Seattle('Tokyo', 65, 20, 6.3),
-    Dubai = new Seattle('Dubai', 65, 20, 6.3),
-    Paris = new Seattle('Paris', 65, 20, 6.3),
-    Lima = new Seattle('Lima', 65, 20, 6.3);
+    Seattl = new Shope('Seattle', 65, 20, 6.3),
+    Tokyo = new Shope('Tokyo', 65, 20, 6.3),
+    Dubai = new Shope('Dubai', 65, 20, 6.3),
+    Paris = new Shope('Paris', 65, 20, 6.3),
+    Lima = new Shope('Lima', 65, 20, 6.3);
 
-Seattle.prototype.header()
+header();
 Seattl.content();
 Tokyo.content();
 Dubai.content();
 Paris.content();
 Lima.content();
-Seattle.prototype.footer();
+footer();
 
-const
-    name = document.getElementById('name'),
-    max = document.getElementById('max'),
-    min = document.getElementById('min'),
-    avr = document.getElementById('avg');
 
-// this function for create a new names on click the button
-function getAll() {
-    if(name.value == '' || max.value == '' || min.value == '' || avr.value == '') {
-        alert('pls Fill your info')
-    }else{
-        let newData = new Seattle(name.value, max.value, min.value, avr.value)
-        let removeRow = Table.rows.length;
-        Table.deleteRow(removeRow - 1);
-        newData.content();
-        newData.footer();
-        name.value = '';
-        max.value = '';
-        min.value = '';
-        avr.value = '';
-    }
-}
-
-// validation 
-
-// const
-//     check_name = document.getElementById('check-name'),
-//     check_max = document.getElementById('check-max'),
-//     check_min = document.getElementById('check-min'),
-//     check_avg = document.getElementById('check-avg');
-
-// let regName = /[a-z]/i;
-// function checkName() {
-
-// }
-
+let inputs = document.getElementById('inputs')
+inputs.addEventListener('submit', function(ev) {
+    ev.preventDefault();
+    var name = ev.target.name.value ;
+    var min = parseInt(ev.target.min.value);
+    var max = parseInt(ev.target.max.value );
+    var avg = parseFloat(ev.target.avg.value);
+    var newData = new Shope(name,max,min,avg);
+    var rowCount = Table.rows.length;
+    Table.deleteRow(rowCount-1);
+    newData.content();
+    footer();
+    inputs.reset();
+  });
